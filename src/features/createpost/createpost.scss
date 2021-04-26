@@ -1,0 +1,64 @@
+@import './../../styles/variables.scss';
+
+form {
+  width: 31.25rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 767px) {
+    width: 20rem;
+  }
+
+  @media only screen and (max-width: 320px) {
+    width: 15rem;
+  }
+
+  h2 {
+    font-weight: 500;
+    color: #1c1e21;
+    text-align: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid $border;
+  }
+
+  p {
+    color: #bf1650;
+    &::before {
+      display: inline;
+      content: "⚠ ";
+    }
+  }
+  textarea,
+  input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    font: 400 1rem Arial;
+  }
+
+  label {
+    line-height: 2;
+    text-align: left;
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 1.25rem;
+    color: #1c1e21;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  input[type="submit"] {
+    background: #3578e5;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 3rem;
+    padding: 1.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

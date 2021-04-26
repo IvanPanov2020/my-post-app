@@ -1,0 +1,223 @@
+@import './../../styles/variables';
+
+.postview{
+    display: flex;
+    .post__list {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 3.75rem 3.75rem;
+
+        @media only screen and (max-width: 480px) {
+            padding: 1rem 1rem;
+        }
+
+        .post__item {
+            align-items: baseline;
+            display: flex;
+            flex: 1 1 50%;
+            flex-flow: wrap;
+            @media only screen and (max-width: 480px) {
+                flex: 1 1 auto;
+            }
+            .post__title {
+                font-size: 2rem;
+                line-height: 2rem;
+                text-align: left;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+
+            .post__description {
+                text-align: justify;
+                margin: 0 3rem 1rem 0;
+                @media only screen and (max-width: 480px) {
+                    margin: 0 0 1rem 0;
+                }
+            }
+
+            .post__footer{
+                display: flex;
+                flex: 100%;
+            }
+            
+            .post__tags {
+                align-items: center;
+                display: flex;
+                flex: 1 1 auto;
+                flex-flow: row;
+
+                &--item {
+                    display: inline-block;
+                    padding: .4rem .5rem;
+                    margin: 2px 2px 2px 0;
+                    font-size: 11px;
+                    line-height: 1;
+                    white-space: nowrap;
+                    text-decoration: none;
+                    text-align: center;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-radius: 3px;
+                    background-color: $tag-blue; 
+                    color: $text-blue;
+                }
+            }
+
+            .post__destroy {
+                color: $red;
+                border: none;
+                margin-right: 3rem;
+                font-size: 1.5rem;
+                @media only screen and (max-width: 480px) {
+                    margin-right: 0;                    
+                }
+            }
+
+            .post__edit {
+                color: $green;
+                border: none;
+                margin-right: 3rem;
+                font-size: 1.5rem;
+                @media only screen and (max-width: 480px) {
+                    margin-right: 0;                    
+                }
+            }
+
+            .post__comments {
+                align-items: baseline;
+                display: flex;
+                flex: 1 1 auto;
+                flex-flow: column;
+                margin-top: 1rem;
+
+                form {
+                   width: 40rem;
+                    margin: 0;
+                    @media only screen and (max-width: 480px) {
+                        width: 20rem;
+                    }
+
+                    label{
+                        margin-top: 2.25rem;
+                    }
+
+                    input[type="submit"] {
+                        width: 5rem;
+                        padding: .25rem;
+                        text-transform: none;
+                        margin-top: .25rem;
+                    }
+                }
+                
+                &--item {
+
+                    .user__section-inner {
+                        align-items: stretch;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        width: 100%;
+                    
+                        .user__section__items {
+                            align-items: center;
+                            display: flex;
+                            flex: 1 1 auto;
+                            
+                            .user {
+                                align-items: center;
+                                color: #1c1e21;
+                                display: flex;
+                                font-weight: 700;
+                                height: 2rem;
+                                margin-right: 1rem;
+                
+                                .profile__image {
+                                    height: 1.25rem;
+                                    margin-right: .5rem;
+                                    border: 1px solid $border;
+                                    border-radius: 50%;
+                                    padding: 0.25rem;
+                                }
+                    
+                                .profile__name {
+                                    flex-shrink: 0;
+                                    max-width: 100%;
+                                }                
+                                
+                            }
+                
+                            &--right {
+                                justify-content: flex-end;
+                                
+                                .post__destroy {
+                                    margin-right: 0;
+                                }
+                                .post__edit {
+                                    margin-right: .25rem;                                    
+                                }
+                            }
+                        }
+                    
+                    }
+
+                    margin-right: 0.5rem;
+                    padding: 0 .5rem 0.2rem .5rem; 
+                    width: 40rem;
+                    border-bottom: 1px solid $border;
+                    margin-top: 1rem;
+
+                    @media only screen and (max-width: 480px) {
+                        width: 20rem;
+                    }
+
+                    span {
+                        text-align: left;
+                        float: left;
+                    }
+
+                    .comment__add{
+                        color: $brown;
+                        float: left;
+                        margin-top: 5px;
+                    }                    
+                }
+
+                &--add {
+                    align-items: baseline;
+                    display: flex;
+                    flex: 100%;
+                    flex-flow: column;
+                    margin-top: 1rem;
+
+                    .comment__add{
+                        color: $brown;
+                    }
+
+                    form {
+                        width: 40rem;
+                        margin: 0;
+                        @media only screen and (max-width: 480px) {
+                            width: 20rem;
+                        }
+
+                        input[type="submit"] {
+                            width: 5rem;
+                            padding: .25rem;
+                            text-transform: none;
+                            margin-top: .25rem;
+                            float: left;
+                            margin-right: 1rem;
+                        }
+
+                        .cancel {
+                            background-color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
